@@ -9,9 +9,6 @@ from environment import env
 from variables import *
 
 
-gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=MEMORY_FRACTION)
-tf.compat.v1.keras.backend.set_session(config=tf.compat.v1.ConfigProto(gpu_options=gpu_options))
-
 np.random.seed(7)
 START_TIME = int(time())
 
