@@ -11,7 +11,7 @@ All these variables are modifiable. Some interact with each other, so becareful 
 
 #NN variables
 * EPISODES = 100
-  * # of episodes the DQN-agent will run for. Not to be confused with TensorFlows 'epochs'.
+  * The # of episodes the DQN-agent will run for. Not to be confused with TensorFlows 'epochs'.
 * MODEL_NAME = '4x256'
   * Every file output will have this as a prefix.
 * MIN_REWARD = -200
