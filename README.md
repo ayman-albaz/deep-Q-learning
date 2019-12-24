@@ -17,11 +17,11 @@ All these variables are modifiable. Some interact with each other, so becareful 
 * MIN_REWARD = -200
   * If the model fails to produce a reward greater than MIN_REWARD when it wants to save the model, it will not save the model.
 * MINIBATCH_SIZE = 64  
-  * # of events from the replay memory to be used for training in every instance. DQNs work through learning with minibatches.
+  * The # of events from the replay memory to be used for training in every instance. DQNs work through learning with minibatches.
 * MIN_REPLAY_MEMORY_SIZE = 1000
-  * # Learning will only occur once 1000 events have filled up the replay memory. This is to avoid training on an empty memory.
+  * The # Learning will only occur once 1000 events have filled up the replay memory. This is to avoid training on an empty memory.
 * REPLAY_MEMORY_SIZE = 5000
-  * # Number of events to store in the memory at all times. Replays are made using deque from the default collections library.
+  * The # Number of events to store in the memory at all times. Replays are made using deque from the default collections library.
 * STATS_EVERY = 10
   * Min, max, and mean are calculated and sent to the tensorboard every 10 episodes.
 * UPDATE_TARGET_EVERY = 5  # Terminal states (end of episodes)
