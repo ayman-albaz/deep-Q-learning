@@ -34,6 +34,12 @@ All these variables are modifiable. Some interact with each other, so becareful 
 * EPSILON_DECAY = 0.99975
 * LEARNING_RATE = 0.001
 
+## Modifications
+I changed the default mountain-car environment around a bit. The default reward mechanism was to give a '-1' reward for every instance that the car doesn't reach the target goal. This reward mechanism is exactly what the 'hypothetical goal' of the environment is. To reach the goal as fast as possible. However I did not use it as it took too much time to train to initially reach the goal. In other words, the agent would not really train (get any positive or less negative feedback), until the car reaches its goal once.
+
+Therefore the reward I set does the following: ```-(((abs(env.observation_space.high[1]) - abs(observation[1])) / abs(env.observation_space.high[1])) ** (1/2))```.
+This equation just means that the car is rewarded (or punished less) whenever its speed is closer to the theoritical maximum speed. Ideally, you'd want to use a combination of both reward, however this equation is the fastest way to reach the goal as fast as possible, since we are getting positive feedback (less negative feedback) from the first training instance. The equation uses the square root of a fraction of a number between 0 and 1. This means that really fast speeds are rewarded very heavily, and really slow speeds are punished very heavily.
+
 ## Testing
 You can see how well the models ran by running the test.py file, I added some of the models I made so you can test for yourself.
 
