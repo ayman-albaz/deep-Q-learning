@@ -42,6 +42,10 @@ This equation just means that the car is rewarded (or punished less) whenever it
 
 The equation uses the square root of a fraction of a number between 0 and 1. This means that really fast speeds are rewarded very heavily, and really slow speeds are punished very heavily.
 
+## How to Run
+```python RL.py```
+Don't use jupyter notebook or ipython terminal if you are going to render the environment, it will not work.
+
 ## Testing
 You can see how well the models ran by running the test.py file, I added some of the models I made so you can test for yourself.
 
